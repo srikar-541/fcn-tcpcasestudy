@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/reno_reno/exp2_1_10.tr') as f:
+with open('../trace_files/newreno_reno/exp2_2_10.tr') as f:
     content = f.readlines()
 
 pkts_rcvd1 = 0

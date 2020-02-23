@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/reno_reno/exp2_1_10.tr') as f:
+with open('../trace_files/newreno_reno/exp2_2_10.tr') as f:
     content = f.readlines()
 
 pkts_rcvd1 = 0
@@ -50,6 +50,6 @@ for line in content:
 tp1 = (pkts_rcvd1 * 1040 * 8) / (end_time_1 - start_time_1) / 1048576
 tp2 = (pkts_rcvd2 * 1040 * 8) / (end_time_2 - start_time_2) / 1048576
 
-print "Throughput:::", tp1
-print "Throughput:::", tp2
+print "Throughput1:::", tp1
+print "Throughput2:::", tp2
 
