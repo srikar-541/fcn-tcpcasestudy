@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/trace_files_tcp_tahoe/exp1_1_10.tr') as f:
+with open('../trace_files/trace_files_Newreno/exp1_3_10.tr') as f:
     content = f.readlines()
 
 packets_sent = 0
@@ -37,4 +37,4 @@ for line in content:
         end_time = packet.time
         set1.remove(packet.seq_number)
 
-print "Througput:::", packets_received * 1040 * 8 / (end_time - start_time) / (1024 * 1024)
+print "Throughput:::", packets_received * 1040 * 8 / (end_time - start_time) / (1024 * 1024)
