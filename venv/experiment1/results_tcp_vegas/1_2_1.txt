@@ -1,0 +1,6 @@
+End to end delay:::: 43.553408
+Average End to End delay:::: 0.00251899410064
+Packets received:::: 17290
+Throughput::: 7.59812269759
+Packets dropped::: 0
+Packet drop rate::: 0.0
