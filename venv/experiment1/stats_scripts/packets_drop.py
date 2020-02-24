@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/trace_files_vegas/exp1_Vegas_10.tr') as f:
+with open('../trace_files/trace_files_tcp_tahoe/exp1_tahoe_10.tr') as f:
     content = f.readlines()
 
 first_line = content[0].split()
