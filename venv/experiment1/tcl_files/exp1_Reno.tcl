@@ -73,11 +73,11 @@ proc finish {} {
 }
 
 #Schedule events for the CBR and FTP agents
-$ns at 0.1 "$cbr start"
-$ns at 1.0 "$ftp start"
-$ns at 4.0 "$ftp stop"
-$ns at 4.5 "$cbr stop"
-$ns at 5 "finish"
+$ns at 0.0 "$cbr start"
+$ns at 0.0 "$ftp start"
+$ns at 10.0 "$ftp stop"
+$ns at 10.0 "$cbr stop"
+$ns at 11.0 "finish"
 
 
 # Close the trace file (after you finish the experiment!)

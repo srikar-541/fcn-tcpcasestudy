@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/newreno_vegas/exp2_4_10.tr') as f:
+with open('../trace_files/newreno_reno/exp2_newreno_reno_2.tr') as f:
     content = f.readlines()
 
 
@@ -40,5 +40,5 @@ for c in content:
         if packet.flow_id == '3':
             packets_dropped2 += 1
 
-print "Packets drop rate 1:::", float(packets_dropped1) , enqueue1
-print "Packets drop rate 2:::", float(packets_dropped2) , enqueue2
+print "Packets drop rate 1:::", float(packets_dropped1) / enqueue1
+print "Packets drop rate 2:::", float(packets_dropped2) / enqueue2

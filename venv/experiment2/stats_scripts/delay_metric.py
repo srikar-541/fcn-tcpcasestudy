@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/newreno_vegas/exp2_4_10.tr') as f:
+with open('../trace_files/newreno_reno/exp2_newreno_reno_1.tr') as f:
     content = f.readlines()
 
 pkts_rcvd1 = 0
@@ -48,6 +48,8 @@ for line in content:
             total_delay2 += packet.time - dict2[packet.seq_number]
             end_time_2 = packet.time
 
+print total_delay1, total_delay2
+print pkts_rcvd1, pkts_rcvd2
 delay1 = 0 if pkts_rcvd1 == 0 else total_delay1 / pkts_rcvd1
 delay2 = 0 if pkts_rcvd2 == 0 else total_delay2 / pkts_rcvd2
 
