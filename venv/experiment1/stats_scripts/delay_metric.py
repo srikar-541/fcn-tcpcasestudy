@@ -14,7 +14,7 @@ class Packet:
 
 
 packets = []
-with open('../trace_files/trace_files_vegas/exp1_Vegas_1.tr') as f:
+with open('../trace_files/trace_files_vegas/exp1_Vegas_10.tr') as f:
     content = f.readlines()
 
 for line in content:
@@ -51,6 +51,6 @@ for i in range(1, len(packets)):
                 pkts_rcvd += 1
                 break
             j = j - 1
-print "End to end delay::::", total_latency
+# print "End to end delay::::", total_latency
 print "Average End to End delay::::", total_latency / pkts_rcvd
-print "Packets received::::", pkts_rcvd
+# print "Packets received::::", pkts_rcvd
