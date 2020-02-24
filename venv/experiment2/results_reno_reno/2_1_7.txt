@@ -1,6 +1,7 @@
-End to End Delay1::: 0.049566974753
-End to End Delay2::: 0
-Throughput::: 2.83693983223
-Throughput::: 0.0
-Packets drop rate 1::: 3.0 3647
-Packets drop rate 2::: 1.0 1
+End to End Delay1::: 0.0487345131919
+End to End Delay2::: 0.050914575804
+Throughput1::: 1.32345637553
+Throughput2::: 0.857261961527
+Packets drop rate 1::: 0.0110002558199
+Packets drop rate 2::: 0.0158251695554
+
