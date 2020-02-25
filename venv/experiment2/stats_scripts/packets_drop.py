@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/reno_reno/exp2_reno_reno_10.tr') as f:
+with open('../trace_files/reno_reno2/reno_reno_10.tr') as f:
     content = f.readlines()
 
 
@@ -35,10 +35,12 @@ for c in content:
             set2.add(packet.pkt_id)
             enqueue2 += 1
     if packet.event == 'd':
-        if packet.flow_id == '2':
+        if packet.flow_id == '2' and set1.__contains__(packet.pkt_id):
             packets_dropped1 += 1
+            set1.remove(packet.pkt_id)
         if packet.flow_id == '3':
             packets_dropped2 += 1
+            set2.remove(packet.pkt_id)
 
 print "Packets drop rate 1:::", float(packets_dropped1) / enqueue1
 print "Packets drop rate 2:::", float(packets_dropped2) / enqueue2

@@ -13,7 +13,7 @@ class Packet:
         self.pkt_id = data[11]
 
 
-with open('../trace_files/exp3_DROP_SACK.tr') as f:
+with open('../trace_files/exp3_DROP_RENO.tr') as f:
     content = f.readlines()
 
 print len(content)
