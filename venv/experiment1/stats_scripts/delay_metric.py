@@ -14,7 +14,7 @@ class Packet:
 
 
 packets = []
-with open('../trace_files/trace_files_reno/exp1_Reno_10.tr') as f:
+with open('../trace_files/tahoe_2/exp1_reno_1_2s.tr') as f:
     content = f.readlines()
 
 for line in content:
