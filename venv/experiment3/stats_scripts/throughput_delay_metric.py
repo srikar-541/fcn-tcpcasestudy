@@ -26,7 +26,6 @@ throughput = 0
 
 for line in content:
     packet = Packet(line.split())
-    # print packet
     if packet.pkt_type == "tcp" and packet.event == "+":
         map[packet.seq_number] = packet.time
 
