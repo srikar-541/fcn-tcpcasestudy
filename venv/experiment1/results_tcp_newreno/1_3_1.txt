@@ -1,3 +1,7 @@
 Average End to End delay:::: 0.00308043204454
 Throughput::: 8.53909071115
 Packet drop rate::: 0.0
+
+Average End to End delay:::: 0.00308017214955
+Throughput::: 8.52805906229
+Packet drop rate::: 0.0
