@@ -3,16 +3,6 @@ set ns [new Simulator]
 set tf [open exp3_7_DROP_SACK.tr w]
 $ns trace-all $tf
 
-
-#Define a 'finish' procedure
-proc finish {} {
-        global ns nf
-        $ns flush-trace
-        #Close the trace file
-        close $nf
-        exit 0
-}
-
 #Create six nodes
 set n1 [$ns node]
 set n2 [$ns node]
@@ -38,9 +28,8 @@ $ns queue-limit	$n6 $n3 10
 set udp [new Agent/UDP]
 $ns attach-agent $n5 $udp
 set cbr [new Application/Traffic/CBR]
-$cbr set rate_ 7Mb
+$cbr set rate_ 8Mb
 $cbr attach-agent $udp
-#Create a Null agent (a traffic sink) and attach it to node n6
 set null [new Agent/Null]
 $ns attach-agent $n6 $null
 

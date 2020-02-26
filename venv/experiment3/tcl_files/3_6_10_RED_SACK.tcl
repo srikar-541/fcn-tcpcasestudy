@@ -28,9 +28,8 @@ $ns queue-limit	$n6 $n3 10
 set udp [new Agent/UDP]
 $ns attach-agent $n5 $udp
 set cbr [new Application/Traffic/CBR]
-$cbr set rate_ 7Mb
+$cbr set rate_ 8Mb
 $cbr attach-agent $udp
-#Create a Null agent (a traffic sink) and attach it to node n6
 set null [new Agent/Null]
 $ns attach-agent $n6 $null
 
@@ -49,7 +48,7 @@ $ns connect $tcp $sink
 $tcp set fid_ 2
 
 $ns at 0.0 "$ftp start"
-$ns at 3.0 "$cbr start"
+$ns at 6.0 "$cbr start"
 $ns at 20.0 "$ftp stop"
 $ns at 20.0 "$cbr stop"
 $ns at 20.5 "finish"
